@@ -55,34 +55,30 @@
 # main()
 
 # print(7.1e-2)
-
 sentence = "wall street journal"
 sentence1 = "this is pig latin"
 def pigLatinSentence(sentence):
     
-    # For words that begin with a vowel (a, e, i, o, u) add way
-    vowel = ["a", "e", "i", "o", "u"]
+    vowels = ["a", "e", "i", "o", "u" ]
     
     words = sentence.split(" ")
     latin_words = []
     
-    for word in words:        
-        if(word[0] in vowel):
+    for word in words:
+        if(word[0] in vowels):
             latin_word = word + "way"
             
-        # Look for the first present vowel letter in the word
         else:
-            for index, char in enumerate(word):
-                if(char in vowel):
+            for index, character in enumerate(word):
+                if(character in vowels):
                     latin_word = word[index:] + word[:index] + "ay"
                     break
         latin_words.append(latin_word)
     
-    
-    print(latin_words)
-                        
-
+    print(latin_words)            
 def main():
     pigLatinSentence(sentence)
-    
+    print("\n---------------------------------")
+    pigLatinSentence(sentence1)
+
 main()
