@@ -25,8 +25,9 @@ Input Format
 A single integer denoting .
 
 For the solutions sake here is a cheat sheet so you won't have to look up the formats like I did:
+P.S Python has built in methods to convert to the specified formats above.
 
-We will be using the variable number for these examples.
+We will be using the variable "number" for these examples.
 number = 20
 TO GET A DECIMAL OF AN INTEGER:
 deci_number = str(number)
@@ -41,15 +42,26 @@ TO GET A HEXADECIMAL OF AN INTEGER:
 hex_number = hex(number)[2:] --> 14
 
 TO GET A BINARY OF AN INTEGER:
-bina_number = bin(number)[2:] --> 
+bina_number = bin(number)[2:] --> 10100
 """
 #______________________
 #      SOLUTION
 #______________________
 
 # Given
-
-def main():
-    print(bin(20)[2:])
-
-main()
+def print_formatted(number):
+    # your code goes here
+    # create the specified width for the solution
+    width = len(bin(number)[2:])
+    
+    for num in range(1, number + 1):
+        deci = str(num)
+        octa = oct(num)[2:]
+        hexa = hex(num)[2:].upper()
+        bina = bin(num)[2:]
+        print(deci.rjust(width), octa.rjust(width), hexa.rjust(width), bina.rjust(width))
+    
+    
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
