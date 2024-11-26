@@ -38,8 +38,11 @@ def minion_game(string):
             
     if kevin_score > stuart_score:
         print(f"Kevin {kevin_score}")
-    else:
+    elif stuart_score > kevin_score:
         print(f"Stuart {stuart_score}")
+    else:
+        print("Draw")
+    
         
 if __name__ == '__main__':
     s = input("Please input some text: ")
