@@ -86,15 +86,28 @@ Error Code: invalid literal for int() with base 10: '$'
 # print(english_sounds("fish")) # prints: "??"
 
 # Create a dictionary of superhero powers
-powers = {
-    "superman": "flight",
-    "batman": "money",
-    "spiderman": "webs",
-    "boots": "magic"
+# powers = {
+#     "superman": "flight",
+#     "batman": "money",
+#     "spiderman": "webs",
+#     "boots": "magic"
+# }
+
+# power = lambda hero: powers.get(hero, "no power found")
+# # Try getting some values
+# print(power("superman"))    # This will print flight
+# print(power("wonderwoman")) # No power found
+# print(power("boots"))
+# print(power("flash"))
+
+marvel_rivals = {
+    "dr strange": "vanguard",
+    "human torch": "duelist",
+    "ultron": "strategist"
 }
 
-# Try getting some values
-print(powers.get("superman", "no power found"))    # This will print flight
-print(powers.get("wonderwoman", "no power found")) # No power found
-print(powers.get("boots", "no feet"))
-print(powers.get("flash", "quick silver is better"))
+role = lambda character: marvel_rivals.get(character, "character does not exist")
+
+print(role("dr strange"))
+print(role("hawkeye"))
+print(role("human torch")) 
