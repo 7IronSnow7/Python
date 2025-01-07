@@ -50,11 +50,13 @@ Error Code: invalid literal for int() with base 10: '$'
 # link: https://www.hackerrank.com/challenges/exceptions/problem?isFullScreen=true
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-for _ in range(int(input())):
-    try:
-        a, b = input().split()
-        print(int(a) // int(b))
-    except ZeroDivisionError as z:
-        print(f"Error Code: {z}")
-    except ValueError as v:
-        print(f"Error Code: {v}")
+# for _ in range(int(input())):
+#     try:
+#         a, b = input().split()
+#         print(int(a) // int(b))
+#     except ZeroDivisionError as z:
+#         print(f"Error Code: {z}")
+#     except ValueError as v:
+#         print(f"Error Code: {v}")
+
+# Gonna use this file to run some tests for a different issue:
