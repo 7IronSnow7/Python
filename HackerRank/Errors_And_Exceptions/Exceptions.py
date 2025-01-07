@@ -60,27 +60,41 @@ Error Code: invalid literal for int() with base 10: '$'
 #         print(f"Error Code: {v}")
 
 # Gonna use this file to run some tests for a different issue:
-def animal_sound_getter(animal_tuples, language):
-    animal_dict = {}
+# def animal_sound_getter(animal_tuples, language):
+#     animal_dict = {}
     
-    # each tuple has (language, [(animal, sound)])
-    # like ("english", [("dog", "woof"), ("cat", "meow")])
-    for lang, animals in animal_tuples:
-        if lang == language:
-            for animal, sound in animals:
-                animal_dict[animal] = sound
+#     # each tuple has (language, [(animal, sound)])
+#     # like ("english", [("dog", "woof"), ("cat", "meow")])
+#     for lang, animals in animal_tuples:
+#         if lang == language:
+#             for animal, sound in animals:
+#                 animal_dict[animal] = sound
 
-    return lambda animal: animal_dict.get(animal, "??")
+#     return lambda animal: animal_dict.get(animal, "??")
 
-# Create our translator
-animal_data = [
-    ("english", [("dog", "woof"), ("cat", "meow")]),
-    ("spanish", [("dog", "guau"), ("cat", "miau")])
-]
+# # Create our translator
+# animal_data = [
+#     ("english", [("dog", "woof"), ("cat", "meow")]),
+#     ("spanish", [("dog", "guau"), ("cat", "miau")])
+# ]
 
-english_sounds = animal_sound_getter(animal_data, "english")
+# english_sounds = animal_sound_getter(animal_data, "english")
 
-# Use the translator
-print(english_sounds("dog"))  # prints: "woof"
-print(english_sounds("cat"))  # prints: "meow"
-print(english_sounds("fish")) # prints: "??"
+# # Use the translator
+# print(english_sounds("dog"))  # prints: "woof"
+# print(english_sounds("cat"))  # prints: "meow"
+# print(english_sounds("fish")) # prints: "??"
+
+# Create a dictionary of superhero powers
+powers = {
+    "superman": "flight",
+    "batman": "money",
+    "spiderman": "webs",
+    "boots": "magic"
+}
+
+# Try getting some values
+print(powers.get("superman", "no power found"))    # This will print flight
+print(powers.get("wonderwoman", "no power found")) # No power found
+print(powers.get("boots", "no feet"))
+print(powers.get("flash", "quick silver is better"))
